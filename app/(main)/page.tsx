@@ -1,29 +1,22 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import TableInvoices from '@/views/invoices/TableInvoices';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center p-4">
-      <WellcomeSkeleton />
-      <WorksapceSkeleton />
-    </div>
-  );
-}
+    <div className="relative flex min-h-screen flex-col p-8 gap-4">
+      <div className="text-4xl font-bold mb-5">List Invoices</div>
 
-function WellcomeSkeleton() {
-  return (
-    <div className="grid justify-items-center space-y-2">
-      <Skeleton className="h-8 w-[150px]" />
-      <Skeleton className="h-4 w-[300px]" />
-    </div>
-  );
-}
+      <div>
+        <Button>
+          <Link href="/new-invoice">Create Invoice</Link>
+        </Button>
+      </div>
 
-function WorksapceSkeleton() {
-  return (
-    <div>
-      <Skeleton className="h-4 w-[250px]" />
+      <TableInvoices />
     </div>
   );
 }

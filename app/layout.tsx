@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import JotaiProviders from '@/components/jotai-provider';
 import { ProgressBarProviders } from '@/components/progress-bar';
 import { cn } from '@/lib/utils';
+import { SnackbarProvider } from '@/context/SnackbarContext';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,7 +36,9 @@ export default function RootLayout({
           <JotaiProviders>
             <Suspense>
               <ProgressBarProviders>
-                <MainContainer>{children}</MainContainer>
+                <SnackbarProvider>
+                  <MainContainer>{children}</MainContainer>
+                </SnackbarProvider>
               </ProgressBarProviders>
             </Suspense>
           </JotaiProviders>
