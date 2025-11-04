@@ -89,4 +89,4 @@ CREATE TABLE IF NOT EXISTS invoice_items (
 
 Saya membutuhkan waktu untuk memahami query SQL, terutama dalam menghitung total_amount.
 Karena belum sepenuhnya memahami konsep agregasi (SUM, JOIN, dll),
-maka sementara ini saya menghitung total amount menggunakan perhitungan manual di sisi aplikasi (client).
+maka sementara ini saya menghitung total amount menggunakan perhitungan manual di sisi aplikasi.
